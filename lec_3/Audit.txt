@@ -1,8 +1,0 @@
-Activity Log
-Add ye: Successful
-Add duniya: Successful
-Add hai: Successful
-Add zalim: Successful
-Search hai: Successful
-Search aashiq: Unsuccessful (does not exist)
-Delete hai: Successful
