@@ -96,6 +96,7 @@ try:
         5. Save a log of the activity of the user in a txt file.
 
         '''))
-        print(("Thanks for using"))
+
 except ValueError:
     print("Please enter a valid number. Program is over.")
+print(("Thanks for using"))

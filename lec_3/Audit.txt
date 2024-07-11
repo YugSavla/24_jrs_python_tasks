@@ -1,0 +1,10 @@
+Activity Log
+Add ye: Successful
+Add xamana: Successful
+Search zamanaa: Unsuccessful (does not exist)
+Delete x: Unsuccessful (does not exist)
+Delete xamana: Successful
+Add zamana: Successful
+Add hai: Successful
+Add bewafa: Successful
+Add ye: Unsuccessful (already exists)
