@@ -47,6 +47,8 @@ class Task_Manager(Record):
             print("Tasks are completed")
         else:
             print(self.r.record) #have to check again
+    def saveTask(self):
+        self.logActivity("Task is saved successfuly")
 
     def logActivity(self, message):
         with open("Audit.txt", 'a') as f:
@@ -62,10 +64,10 @@ try:
     3. Search for existing tasks
     4. Print all existing tasks
     5. Save a log of the activity of the user in a txt file.
-
+    6. Exit Option
     '''))
 
-    while n != 5:
+    while n != 6:
         try:
             if n == 1:
                 print("Create and Enter a new task")
@@ -83,6 +85,9 @@ try:
             elif n == 4:
                 print("Here are the tasks which are left")
                 t.printTask()
+            elif n == 5:
+                t.saveTask()
+                print("Saved a log file")
             else:
                 print("Invalid option. Please choose a valid operation.")
         except Exception as e:
@@ -94,7 +99,7 @@ try:
         3. Search for existing tasks
         4. Print all existing tasks
         5. Save a log of the activity of the user in a txt file.
-
+        6. Exit Option
         '''))
 
 except ValueError:
