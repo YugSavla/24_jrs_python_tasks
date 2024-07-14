@@ -1,3 +1,4 @@
+import Undo_Task_2
 def sum(a, b, c):
     return a + b + c
 
@@ -45,22 +46,32 @@ if __name__ == "__main__":
     xState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     zState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     turn = 1  # 1 for X and 0 for O
+    log=[]
     print("Welcome to Tic Tac Toe")
     while True:
         printBoard(xState, zState)
         try:
             if turn == 1:
                 print("X's Chance")
-                value = int(input("Please enter a value: "))
+                value = int(input("Please enter a value (or -1 to undo): "))
+                if value == -1:
+                    if Undo_Task_2.undoMove(log, xState, zState):
+                        turn = 1 - turn
+                    continue
                 if not isValid(value, xState, zState):
                     break
                 xState[value] = 1
             else:
                 print("O's Chance")
-                value = int(input("Please enter a value: "))
+                value = int(input("Please enter a value (or -1 to undo): "))
+                if value == -1:
+                    if Undo_Task_2.undoMove(log, xState, zState):
+                        turn = 1 - turn
+                    continue
                 if not isValid(value, xState, zState):
                     break
                 zState[value] = 1
+            log.append((value, turn))
         except ValueError:
             print("Invalid input! Please enter a number between 0 and 8.")
             break
